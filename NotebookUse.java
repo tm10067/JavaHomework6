@@ -174,28 +174,18 @@ public class NotebookUse {
     }
     private static int askInteger() {
         Scanner scanner = new Scanner(System.in);
-        while (true) {
-            String str = scanner.nextLine();
-            int input = 0;
-            try {
-                input = Integer.parseInt(str);
-                return input;
-            } catch (Exception e) {
-                return input;
-            }
-        }
+        String str = scanner.nextLine();
+        try {
+            return Integer.parseInt(str);
+        } catch (Exception ignored) {}
+        return 0;
     }
     private static double askDouble() {
         Scanner scanner = new Scanner(System.in);
-        while (true) {
-            String str = scanner.nextLine();
-            double input = 0.0;
-            try {
-                input = Double.parseDouble(str);
-                return input;
-            } catch (Exception e) {
-                return input;
-            }
-        }
+        String str = scanner.nextLine();
+        try {
+            return Double.parseDouble(str);
+        } catch (Exception ignored) {}
+        return 0.0;
     }
 }
